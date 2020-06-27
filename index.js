@@ -1,4 +1,4 @@
-function shadowizard(options) {
+export function shadowizard(options) {
   let images = document.querySelectorAll('.shadowizard');
 
   if (options.shadow_type === 'hard') {
@@ -17,4 +17,27 @@ function shadowizard(options) {
 
 }
 
-module.exports.shadowizard = shadowizard;
+
+
+// Do not export the function
+function somePrivateFunction() {
+  // ...
+}
+
+// Export default function
+export function sayHello() {
+  console.log('Hello');
+}
+
+// Export non-default function
+export function sayGoodbye() {
+  console.log('Goodbye');
+}
+
+// Export simple value
+export const apiUrl = '...';
+
+// Export object
+export const settings = {
+  debug: true
+}
